@@ -29,6 +29,7 @@ Into this:
 ![IMAGE HERE]()
 
 It does this by
+
 1. Melting the PET
 2. Shoving it through a very small hole (1.75mm)
 3. dragging the filament that comes out through a water bath to cool the plastic down
@@ -48,11 +49,33 @@ with a diameter of 5mm.
 
 ### Stepper
 
+A !!! stepper is used. Although this is hard to source locally, we rationalize
+our choice with the following points:
+
 ### Auger
 
 ### Heat
 
 #### Zones
+
+The areas that need to be heated are split into five zones. They are as follows:
+
+1. The first heating zone
+2. The second heating zone
+3. The third heating zone
+4. The first colling zone
+5. The final cooling zone
+
+![Heating zones]()
+
+##### Heating Zones
+
+##### Cooling Zones
+
+After the heating zones, the plastic enter the "cooling zones". However, rather
+unintuitively, the cooling zones are heated. But, instead of the 260°C, these zones
+are heated to ???°C. This allows the plastic to cool some before it enters the water,
+reducing the required length for the waterbath length.
 
 #### Heaters
 
@@ -60,7 +83,7 @@ with a diameter of 5mm.
 
 #### Control
 
-#### Out
+### Out
 
 While the recommended diameter of the final output is 1/2 half of the diameter
 of the preceding pipe (giving us a diameter of 3mm), we have had problems with an
@@ -72,7 +95,7 @@ decreases in diameter due to tension.) As such, we have an final extrusion diame
 ![Starve Feeder]()
 
 The extruder is fed by a starve feeder. Using a vibratory conveyor, PET is fed to
-the extruder at a precise rate. This is done with spring steel (tape measure sections)
+the extruder at a precise rate. This is done with spring steel (sections of cut tape measure)
 and a motor with an of center weight.
 
 ## Water Bath
