@@ -48,9 +48,16 @@ which causes the plastic to melt. This melted plastic is then pushed out of a ho
 with a diameter of 5mm.
 
 ### Stepper
-
-A !!! stepper is used. Although this is hard to source locally, we rationalize
+229$ for motor and 160 driver (driver KL-2283)
+A **NEMA42** stepper with a touque rating of 4100 *oz/in* is used. Although this is hard to source locally, we rationalize
 our choice with the following points:
+
+1. More touque == More better. With a higher tourque, we can move at higher speeds without the fear of skipped steps.
+2. It's easy to use, and very robust.
+3. Variable frequence drives are commonly more expensive and their extra tourque is not needed.
+
+(A **NEMA34** has been show to be a usuful alternative, and due to its relativly
+very low cost, it is a hard constestant for the spotlight.)
 
 ### Auger
 
@@ -62,19 +69,31 @@ The areas that need to be heated are split into five zones. They are as follows:
 
 1. The first heating zone
 2. The second heating zone
-3. The third heating zone
-4. The first colling zone
-5. The final cooling zone
+3. The first cooling zone
+4. The final cooling zone
+5. The final heating zone
+
+Plug flow vs laminar flow
+
+higher inside viscocity and lower outside
+
+better surface tension
+
+
 
 ![Heating zones]()
 
 ##### Heating Zones
 
+As the name implies, the heating zones heat the plastic up to 260°C, the melting point of PET. However, the last zone is special, occupying position five, which is directly after the cooling zones.
+
+Zone five
+
 ##### Cooling Zones
 
-After the heating zones, the plastic enter the "cooling zones". However, rather
-unintuitively, the cooling zones are heated. But, instead of the 260°C, these zones
-are heated to ???°C. This allows the plastic to cool some before it enters the water,
+After the first two intial heating zones, the plastic enter the "cooling zones". However, rather
+unintuitively, the cooling zones are heated much like the heating zones. But, instead of the 260°C, these zones
+are heated to 200°C. This allows the plastic to cool some before it enters the water,
 reducing the required length for the waterbath length.
 
 #### Heaters
