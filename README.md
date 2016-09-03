@@ -44,7 +44,7 @@ In order to make the documentation more paletable, from here on the machine will
 The most important part of Thunderhead is the extruder. Driving by a !SPEC HERE!
 stepper motor, Thunderhead pushes shredded PET through a heated barrel with a auger
 which causes the plastic to melt. This melted plastic is then pushed out of a hole
-with a diameter of !SPEC HERE!.
+with a diameter of 5mm.
 
 ### Stepper
 
@@ -59,6 +59,13 @@ with a diameter of !SPEC HERE!.
 #### Thermresistors
 
 #### Control
+
+#### Out
+
+While the recommended diameter of the final output is 1/2 half of the diameter
+of the preceding pipe (giving us a diameter of 3mm), we have had problems with an
+unsufficant neck-down distance. (This is the distane that the plastic naturally
+decreases in diameter due to tension.) As such, we have an final extrusion diameter of 5mm.
 
 ## Starve Feeder
 
