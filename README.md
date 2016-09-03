@@ -61,6 +61,11 @@ very low cost, it is a hard constestant for the spotlight.)
 
 ### Auger
 
+Auger is a half inch diameter 18 inch long ship auger deisgned for drilling for drilling holes in wood.
+Easy to obtain, low cost (22$) and very robust, work very well when one considers that they
+are not designed for plastic extrusion. While a properly deisgned screw (a plastic extrusion screw)
+would work better, we have found these augers to be quite practical.
+
 ### Heat
 
 #### Zones
@@ -97,6 +102,7 @@ are heated to 200°C. This allows the plastic to cool some before it enters the 
 reducing the required length for the waterbath length.
 
 #### Heaters
+
 
 #### Thermresistors
 
