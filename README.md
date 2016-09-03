@@ -30,9 +30,9 @@ Into this:
 
 It does this by
 
-1. Melting the PET
-2. Shoving it through a very small hole (1.75mm)
-3. dragging the filament that comes out through a water bath to cool the plastic down
+1. Melting PET
+2. Pushing it through a very small hole (4mm)
+3. Pulling the filament that comes out through a water bath to cool the plastic down
 4. Winding the plastic up on a spool for future use
 5. Repeating
 
@@ -43,13 +43,13 @@ In order to make the documentation more paletable, from here on the machine will
 ![Extruder](Extruder)
 
 The most important part of Thunderhead is the extruder. Driving by a !SPEC HERE!
-stepper motor, Thunderhead pushes shredded PET through a heated barrel with a auger
+stepper motor, Thunderhead pushes shredded PET through a heated barrel with an auger
 which causes the plastic to melt. This melted plastic is then pushed out of a hole
 with a diameter of 5mm.
 
 ### Stepper
 229$ for motor and 160 driver (driver KL-2283)
-A **NEMA42** stepper with a touque rating of 4100 *oz/in* is used. Although this is hard to source locally, we rationalize
+A **NEMA42** stepper with a touque rating of 4100 *oz*/*in* is used. Although this is hard to source locally, we rationalize
 our choice with the following points:
 
 1. More touque == More better. With a higher tourque, we can move at higher speeds without the fear of skipped steps.
@@ -92,7 +92,16 @@ better surface tension
 
 As the name implies, the heating zones heat the plastic up to 260°C, the melting point of PET. However, the last zone is special, occupying position five, which is directly after the cooling zones.
 
-Zone five
+Zone five is the special child. It heats the plastic, but since its length is
+so short, it only heats the outside of te plastic. This is intentional, and
+is done in an attempt to attin plug flow (as apposed to laminar flow.)
+
+Laminar Flow:
+![Laminar Flow]()
+Plug Flow:
+![Plug Flow]()
+
+This is done by decreasing the outside viscocity (through heat) and increasing the inside viscocity by cooling it (via the cooling stages).
 
 ##### Cooling Zones
 
@@ -103,8 +112,14 @@ reducing the required length for the waterbath length.
 
 #### Heaters
 
+The first two zones are 1/2" by two feet long tape heater. (Fibreglass insulated nichrome wire.) (110 / 220 VAC) wrapped      104W       briskheat - sutible for electrical conductive surface.  up to 700        super flexable
 
-#### Thermresistors
+allow more room for change in the design
+
+future - maybe worthwile to change to a bandheater for cost reasons
+
+
+#### Thermistors
 
 #### Control
 
@@ -113,7 +128,7 @@ reducing the required length for the waterbath length.
 While the recommended diameter of the final output is 1/2 half of the diameter
 of the preceding pipe (giving us a diameter of 3mm), we have had problems with an
 unsufficant neck-down distance. (This is the distane that the plastic naturally
-decreases in diameter due to tension.) As such, we have an final extrusion diameter of 5mm.
+decreases in diameter due to tension.) As such, we have an final extrusion diameter of 4mm.
 
 ## Starve Feeder
 
