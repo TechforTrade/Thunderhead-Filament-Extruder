@@ -36,7 +36,8 @@ It does this by
 4. Winding the plastic up on a spool for future use
 5. Repeating
 
-In order to make the documentation more paletable, from here on the machine will be described in parts.
+In order to make the documentation more paletable, from here on the
+machine will be described in parts.
 
 ## Extruder
 
@@ -49,7 +50,8 @@ with a diameter of 5mm.
 
 ### Stepper
 229$ for motor and 160 driver (driver KL-2283)
-A **NEMA42** stepper with a touque rating of 4100 *oz*/*in* is used. Although this is hard to source locally, we rationalize
+A **NEMA42** stepper with a touque rating of 4100 *oz*/*in* is used.
+Although this is hard to source locally, we rationalize
 our choice with the following points:
 
 1. More touque == More better. With a higher tourque, we can move at higher speeds without the fear of skipped steps.
@@ -61,46 +63,32 @@ very low cost, it is a hard constestant for the spotlight.)
 
 ### Auger
 
-Auger is a half inch diameter 18 inch long ship auger deisgned for drilling for drilling holes in wood.
-Easy to obtain, low cost (22$) and very robust, work very well when one considers that they
-are not designed for plastic extrusion. While a properly deisgned screw (a plastic extrusion screw)
+Auger is a half inch diameter 18 inch long ship auger deisgned for drilling
+holes in wood. Easy to obtain, low cost (22$) and very robust,
+work very well when one considers that they are not designed for plastic
+extrusion. While a properly deisgned screw (a plastic extrusion screw)
 would work better, we have found these augers to be quite practical.
 
 ### Heat
 
-#### Zones
-
-The areas that need to be heated are split into five zones. They are as follows:
-
-1. The first heating zone
-2. The second heating zone
-3. The first cooling zone
-4. The final cooling zone
-5. The final heating zone
-
-Plug flow vs laminar flow
-
-higher inside viscocity and lower outside
-
-better surface tension
-
-
-
 ![Heating zones]()
 
-##### Heating Zones
-
-As the name implies, the heating zones heat the plastic up to 260°C, the
-melting point of PET. However, the last zone is special, occupying position
-five, which is directly after the cooling zones.
+#### Heating Zones
 
 The barrel of the extruder has a total of 5 heating zones, two on the barrel,
 two on the cooling tube and one on the nozzle. Each heating zone has its own
 temperature sensor and control circuitry allowing the temperatures to be set
 independently of each other. The first two heating zones on the barrel are
 typically set near 265°C.  High temperature fiberglass insulation is used to
-reduce heat loss.  The last three heating zones help obtain plug flow (as opposed to
-laminar flow.)
+reduce heat loss.
+
+At the end of the barrel, the plastic makes a 90° turn and heads straight down
+inside of the cooling tube. This tube with its two heating zones is held at a
+temperature of around 195 °C. The idea is to cool the plastic as much as possible
+before it leaves the nozzle. The nozzle has the final heating zone, and can be
+set to a higher temperature to help improve the surface finish of the plastic
+and possibly improve the flow of plastic near the inside walls of the nozzle.
+This granular control help obtain plug flow (as opposed to laminar flow.)
 
 Laminar Flow:
 ![Laminar Flow]()
@@ -119,12 +107,22 @@ rated up to 700°C which is much higher than our current need, allowing us to ma
 changes without worrying about heat. In the future it maybe worthwile to change
 to a bandheater for cost reasons.
 
-
 #### Thermistors
 
 #### Control
 
-### Out
+
+### Breaker Plate & Fume Control
+
+Between the end of the barrel and the cooling tube is the breaker plate, which
+helps to straighten the flow of the polymer. The rotation of the screw creates
+a twist in the polymer, which it would “remember” were there no breaker plate.
+This twist causes wavy corkscrew shaped filament.
+
+Finally, the extruder has a sheet metal cover, which captures fumes and channels
+them into an exhaust duct.
+
+### End
 
 While the recommended diameter of the final output is 1/2 half of the diameter
 of the preceding pipe (giving us a diameter of 3mm), we have had problems with an
@@ -143,23 +141,64 @@ and a motor with an of center weight.
 
 ![Water Bath]()
 
-The water bath cools the PET after it is extruded. How it does this is a bit complicated,
-and involves a guiding system, a large aluminium roller and a motorized out feed. Let's
-take it in steps.
-
-### Wheel
+PET plastic crystalizes if it cools too slowly. Crystallization causes the plastic
+to become more brittle and opaque which are not desired qualities in PET 3D
+printer filament. To avoid crystallization, the plastic is extruded straight
+into a water bath where the temperature of the plastic is reduced fast enough
+to avoid crystallization.
 
 ### Guides
 
-### Out Feed
+There are 7 guide wheels in the water bath that hold
+the filament in a straight line as it passes through the water bath. The first
+is a large aluminum disk with a grooved edge. It spins with a tangential velocity
+matching the velocity of the filament, which helps to avoid skipping that is
+observed when the wheel is stationary. The other guides are v-grooved rollers
+(though they don’t spin). They guide the filament while allowing bumps and
+bends to pass without hanging up.
+
+## Out Feed
+
+The outfeed is used to pull the filament through the water bath and control its
+diameter (see Figure 4 for image). It consists of a diameter sensor and a set of
+rollers driven by a stepper motor. The diameter sensor will be located just
+below the nozzle and the outfeed rollers are located at the end of the water bath.
+
+Ideally, if the extruder were to extrude at a constant rate, the outfeed could
+be set at a corresponding constant rate to achieve the desired filament diameter
+by drawing down the hot plastic. The diameter sensor could be placed near the
+outfeed rollers and used to make sure the rollers are running at the correct
+speed. Due to the non-uniform nature of the bottle flake and the lack of a
+screw designed for plastic extrusion (among other possible issues), the rate at
+which plastic leaves the extruder varies and thus the required outfeed roller
+speed required to obtain the desired diameter also varies.
+
+The diameter sensor will be used to determine if the outfeed roller speed needs
+to be adjusted to keep the filament within the desired tolerance. To be effective,
+it needs to be located where the plastic is being drawn down. This is just under
+the nozzle where the plastic is molten. The diameter sensor thus must be able to
+make measurements without contacting the filament and must be waterproof. It is
+currently under development [here](LINKHERE) and utilizes a laser and Charge
+Coupled Device (CCD) array.
+
+## Spooler
+
+The spooler winds the filament onto a spool after it leaves the outfeed.
+It is equipped with a sensor that measures the tension on the filament.
+A proportional integral derivative (PID) controller adjusts the speed of the
+spooler to maintain a constant tension.
 
 ## On Going Work
 
-All the present files can be found [here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
+All the present files can be found
+[here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
 
 ## Maintainers
 
-[Matthew Rogge](https://github.com/Maaphoo) and [Michael Uttmark](https://github.com/biosafetylvl5) are currently the maintainers of this repository.
+[Matthew Rogge](https://github.com/Maaphoo) and
+[Michael Uttmark](https://github.com/biosafetylvl5) are currently the
+maintainers of this repository.
 
 ## License
-This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
+This work is licensed under the Creative Commons Attribution 4.0 International
+License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
