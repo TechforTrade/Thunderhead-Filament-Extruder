@@ -90,33 +90,34 @@ better surface tension
 
 ##### Heating Zones
 
-As the name implies, the heating zones heat the plastic up to 260°C, the melting point of PET. However, the last zone is special, occupying position five, which is directly after the cooling zones.
+As the name implies, the heating zones heat the plastic up to 260°C, the
+melting point of PET. However, the last zone is special, occupying position
+five, which is directly after the cooling zones.
 
-Zone five is the special child. It heats the plastic, but since its length is
-so short, it only heats the outside of te plastic. This is intentional, and
-is done in an attempt to attin plug flow (as apposed to laminar flow.)
+The barrel of the extruder has a total of 5 heating zones, two on the barrel,
+two on the cooling tube and one on the nozzle. Each heating zone has its own
+temperature sensor and control circuitry allowing the temperatures to be set
+independently of each other. The first two heating zones on the barrel are
+typically set near 265°C.  High temperature fiberglass insulation is used to
+reduce heat loss.  The last three heating zones help obtain plug flow (as opposed to
+laminar flow.)
 
 Laminar Flow:
 ![Laminar Flow]()
 Plug Flow:
 ![Plug Flow]()
 
-This is done by decreasing the outside viscocity (through heat) and increasing the inside viscocity by cooling it (via the cooling stages).
-
-##### Cooling Zones
-
-After the first two intial heating zones, the plastic enter the "cooling zones". However, rather
-unintuitively, the cooling zones are heated much like the heating zones. But, instead of the 260°C, these zones
-are heated to 200°C. This allows the plastic to cool some before it enters the water,
-reducing the required length for the waterbath length.
+This is done by decreasing the outside viscocity (through heat) and increasing
+the inside viscocity by cooling it (via the cooling stages).
 
 #### Heaters
 
-The first two zones are 1/2" by two feet long tape heater. (Fibreglass insulated nichrome wire.) (110 / 220 VAC) wrapped      104W       briskheat - sutible for electrical conductive surface.  up to 700        super flexable
-
-allow more room for change in the design
-
-future - maybe worthwile to change to a bandheater for cost reasons
+The first two zones are 1/2" by two feet long tape heater. The 104W tape heaters are
+fibreglass insulated nichrome wire which can be run on 110 or 220 VAC. They are purchased
+from briskheat and are sutible for use on an electrical conductive surface. They are
+rated up to 700°C which is much higher than our current need, allowing us to make design
+changes without worrying about heat. In the future it maybe worthwile to change
+to a bandheater for cost reasons.
 
 
 #### Thermistors
