@@ -7,24 +7,15 @@ host for documentation and as a snapshot of the development being done on our
 [GrabCAD
 Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
 
-## Software
-
-The software that faccilitates the use of Thunderheadand its accompaning
-documentation can be found [here](https://github.com/Maaphoo/Thunderware).
-
-## Hardware
-
-### Overview
-
-This is Thunderhead:
+# This is Thunderhead:
 
 ![Thunderhead](./img/Thunderhead.png)
 
-Thunderhead turns this:
+# Thunderhead turns this:
 
 ![Shedded PET](./img/shredded_pet.jpg)
 
-Into this:
+# Into this:
 
 ![IMAGE HERE](./img/filament.jpg)
 
@@ -36,6 +27,10 @@ the plastic up on a spool for future use 5. Repeating
 
 In order to make the documentation more paletable, from here on the machine will
 be described in parts.
+
+## Hardware
+
+### Overview
 
 ## Extruder
 
@@ -285,6 +280,11 @@ possibly be added to scavenge water remaining in the melt, which would help
 improve viscosity. Nucleating agents such as sodium benzoate and talc might be
 used to encourage crystal growth, growing more numerous and smaller crystals
 which may help to reduce the brittleness of crystalline polymer.
+
+## Software
+
+The software that faccilitates the use of Thunderheadand its accompaning
+documentation can be found [here](https://github.com/Maaphoo/Thunderware).
 
 ## Users
 
