@@ -14,7 +14,7 @@ documentation can be found [here](https://github.com/Maaphoo/Thunderware).
 
 ## Hardware
 
-# Overview
+### Overview
 
 This is Thunderhead:
 
@@ -109,10 +109,6 @@ to a bandheater for cost reasons.
 
 #### Thermistors
 
-#### Control
-
-
-
 ### Breaker Plate & Fume Control
 
 Between the end of the barrel and the cooling tube is the breaker plate, which
@@ -190,10 +186,44 @@ It is equipped with a sensor that measures the tension on the filament.
 A proportional integral derivative (PID) controller adjusts the speed of the
 spooler to maintain a constant tension.
 
+## Controller
+
+The controller holds all of the electronics necessary to run the machine and the
+user interface. The machine can be powered with either 120 or 220 VAC. Only the
+heaters for the extruder are voltage specific. The machine is fused and protected
+by a Ground Fault Circuit interrupter (GFCI) device to prevent unfortunate
+situations.
+
 ## On Going Work
 
 All the present files can be found
 [here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
+
+## Planned Improvements
+
+### Drying hopper
+Currently the plastic is dried and then put into the hopper where it sits and absorbs moisture. With a drying hopper, the plastic would be continuously dried and would have no chance to absorb moisture before entering the machine. This may help improve the melt viscosity by reducing the amount of polymer hydrolysis.
+
+
+### Non Contact Diameter Sensor
+
+In order to effectively control the diameter by varying the speed of the outfeed rollers, the diameter must be measured at or close to the point where changes in roller speed have the greatest effect on the diameter. This is in a location where the plastic cannot be touched, just below the nozzle and above the surface of the water. Using a laser and a CCD array, the diameter could be measured by taking a picture of the shadow of the plastic melt as it enters the water bath. The gap between the water bath and the nozzle is only about 10 mm so the sensor will be partially submerged in water. It will need to be waterproof.
+
+### New Filament support/guiding strategy
+The shape and diameter of the filament is essentially set when the hot plastic enters the water bath. Unwanted movement of the filament down stream from this point can greatly impact the shape of the filament. New strategies for guiding the filament in a controlled manner need to be explored. The shape of the filament is also heavily impacted by the large guide wheel which it contacts just after it enters the water. Are there other ways to support the filament as it moves through the water bath that result in more consistent shape?
+
+### Nozzle Geometry and Drawdown
+It may be fruitful to explore different nozzle geometries and the amount and rate of drawdown. What are the optimal conditions for consistent filament?
+
+### Test different sources of PET
+Not all PET resins are the same. By testing resins from various bottle sources and even virgin pellets, it may be possible to determine whether or not some sources have more desirable characteristics than others.
+
+### Melt Filter
+A screen should be added just up stream of the breaker plate. This screen will catch debris and improve the quality of the filament.
+
+### Explore potential additives
+Desiccating agents such as CaO (quicklime) or even Portland cement might possibly be added to scavenge water remaining in the melt, which would help improve viscosity. Nucleating agents such as sodium benzoate and talc might be used to encourage crystal growth, growing more numerous and smaller crystals which may help to reduce the brittleness of crystalline polymer.
+
 
 ## Maintainers
 
