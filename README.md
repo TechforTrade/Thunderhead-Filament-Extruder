@@ -50,8 +50,7 @@ Although this is hard to source locally, we rationalize our choice with the
 following points:
 
 1. More touque == More better. With a higher tourque, we can move at higher
-speeds without the fear of skipped steps.
-2. It's easy to use, and very robust.
+speeds without the fear of skipped steps. 2. It's easy to use, and very robust.
 3. Variable frequence drives are commonly more expensive and their extra tourque
 is not needed.
 
@@ -94,13 +93,12 @@ plastic and possibly improve the flow of plastic near the inside walls of the
 nozzle. This granular control help obtain plug flow (as opposed to laminar
 flow.)
 
-Laminar Flow:
+Laminar Flow: ![Laminar
+Flow](https://upload.wikimedia.org/wikipedia/commons/5/59/Laminar_flow_profile.gif)
 
-![Laminar Flow]()
-
-Plug Flow:
-
-![Plug Flow]()
+Plug Flow:![Plug Flow via By User A1 - Own work, CC BY-SA 3.0,
+https://commons.wikimedia.org/w/index.php?curid=5297152,
+resized.](./img/plug-flow.png)
 
 This is done by decreasing the outside viscocity (through heat) and increasing
 the inside viscocity by cooling it (via the cooling stages).
@@ -317,6 +315,8 @@ the course of the project:
 **Unilever plc.** whose PET specialists have provided assistance in designing
 **plastic sampling approaches
 
-## License This work is licensed under the Creative Commons Attribution 4.0
-## International License. To view a copy of this license, visit
-## http://creativecommons.org/licenses/by/4.0/.
+## License
+
+This work is licensed under the Creative Commons Attribution 4.0 International
+License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by/4.0/. 
