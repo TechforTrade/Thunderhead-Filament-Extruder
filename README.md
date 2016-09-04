@@ -112,6 +112,7 @@ to a bandheater for cost reasons.
 #### Control
 
 
+
 ### Breaker Plate & Fume Control
 
 Between the end of the barrel and the cooling tube is the breaker plate, which
@@ -127,15 +128,16 @@ them into an exhaust duct.
 While the recommended diameter of the final output is 1/2 half of the diameter
 of the preceding pipe (giving us a diameter of 3mm), we have had problems with an
 unsufficant neck-down distance. (This is the distane that the plastic naturally
-decreases in diameter due to tension.) As such, we have an final extrusion diameter of 4mm.
+decreases in diameter due to tension.) As such, we have an final extrusion
+diameter of 4mm.
 
 ## Starve Feeder
 
 ![Starve Feeder]()
 
 The extruder is fed by a starve feeder. Using a vibratory conveyor, PET is fed to
-the extruder at a precise rate. This is done with spring steel (sections of cut tape measure)
-and a motor with an of center weight.
+the extruder at a precise rate. This is done with spring steel (sections of cut
+tape measure) and a motor with an of center weight.
 
 ## Water Bath
 
@@ -198,6 +200,23 @@ All the present files can be found
 [Matthew Rogge](https://github.com/Maaphoo) and
 [Michael Uttmark](https://github.com/biosafetylvl5) are currently the
 maintainers of this repository.
+
+## Acknowledgements
+
+The following people and organizations provided valuable help and guidance over
+the course of the project.
+
+Matt Clark who provided hundreds of free man hours to assist with the re-design
+process.
+
+Frank Schoofs who volunteered his material science expertise to assist with
+calculations required to re-design extrusion temperature settings and speeds.
+
+Vasileios Grammatikakis an electronics expert who has assisted with improvements
+to the Thunderhead electronics.
+
+Unilever plc. Whose PET specialists have provided assistance in designing plastic
+sampling approaches
 
 ## License
 This work is licensed under the Creative Commons Attribution 4.0 International
