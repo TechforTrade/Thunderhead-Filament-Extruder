@@ -1,4 +1,4 @@
-# Thunderhead
+x# Thunderhead
 
 Thunderhead is a PET extruder designed by TechforTrade for producing filament
 for use in 3D printing. A special emphasis throughout the design has been placed
@@ -93,10 +93,10 @@ plastic and possibly improve the flow of plastic near the inside walls of the
 nozzle. This granular control help obtain plug flow (as opposed to laminar
 flow.)
 
-Laminar Flow: ![Laminar
+Laminar Flow:  ![Laminar
 Flow](https://upload.wikimedia.org/wikipedia/commons/5/59/Laminar_flow_profile.gif)
 
-Plug Flow:![Plug Flow via By User A1 - Own work, CC BY-SA 3.0,
+Plug Flow: ![Plug Flow via By User A1 - Own work, CC BY-SA 3.0,
 https://commons.wikimedia.org/w/index.php?curid=5297152,
 resized.](./img/plug-flow.png)
 
@@ -284,14 +284,6 @@ which may help to reduce the brittleness of crystalline polymer.
 The software that faccilitates the use of Thunderheadand its accompaning
 documentation can be found [here](https://github.com/Maaphoo/Thunderware).
 
-## Users
-
-### STICLab
-
-### Reflow
-
-### ?
-
 ## Maintainers
 
 [Matthew Rogge](https://github.com/Maaphoo) and [Michael
@@ -319,4 +311,4 @@ the course of the project:
 
 This work is licensed under the Creative Commons Attribution 4.0 International
 License. To view a copy of this license, visit
-http://creativecommons.org/licenses/by/4.0/. 
+http://creativecommons.org/licenses/by/4.0/.
