@@ -9,11 +9,13 @@ host for the documentation and code used with the machine. We are using GrabCAD 
 
 # Thunderhead turns this:
 
-![Shedded PET](./img/shredded_pet.jpg?v=4&s=50)
+
+
+<img src="./img/PET_Flake.jpg" width="400">
 
 # Into this:
 
-![IMAGE HERE](./img/filament.jpg)
+<img src="./img/filament.jpg" width="400">
 
 It does this by
 
