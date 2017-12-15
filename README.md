@@ -1,11 +1,7 @@
-x# Thunderhead
+# Thunderhead Filament Extruder
 
-Thunderhead is a PET extruder designed by TechforTrade for producing filament
-for use in 3D printing. A special emphasis throughout the design has been placed
-on using affordable and easily attinable materials. This repository serves as a
-host for documentation and as a snapshot of the development being done on our
-[GrabCAD
-Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
+The Thunderhead filament extruder is a  small scale extruder designed by Techfortrade for that can be used for recycling PET plastic bottles into 3D printing filament. A special emphasis throughout the design has been placed on using affordable and easily attainable materials. This repository serves as a
+host for the documentation and code used with the machine. We are using GrabCAD Workbench for the hardware development and will place snapshots of the CAD files here on Github with each release. Current (though not necessarily stable) files can be accessed on our [GrabCAD partner space](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
 
 # This is Thunderhead:
 
@@ -13,7 +9,7 @@ Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj
 
 # Thunderhead turns this:
 
-![Shedded PET](./img/shredded_pet.jpg)
+![Shedded PET](./img/shredded_pet.jpg?s=200)
 
 # Into this:
 
@@ -22,8 +18,8 @@ Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj
 It does this by
 
 1. Melting PET 2. Pushing it through a very small hole (4mm) 3. Pulling the
-filament that comes out through a water bath to cool the plastic down 4. Winding
-the plastic up on a spool for future use 5. Repeating
+  filament that comes out through a water bath to cool the plastic down 4. Winding
+  the plastic up on a spool for future use 5. Repeating
 
 In order to make the documentation more paletable, from here on the machine will
 be described in parts.
@@ -50,9 +46,9 @@ Although this is hard to source locally, we rationalize our choice with the
 following points:
 
 1. More touque == More better. With a higher tourque, we can move at higher
-speeds without the fear of skipped steps. 2. It's easy to use, and very robust.
-3. Variable frequence drives are commonly more expensive and their extra tourque
-is not needed.
+  speeds without the fear of skipped steps. 2. It's easy to use, and very robust.
+2. Variable frequence drives are commonly more expensive and their extra tourque
+  is not needed.
 
 (A **NEMA34** has been show to be a usuful alternative, and due to its relativly
 very low cost, it is a hard constestant for the spotlight.)
