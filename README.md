@@ -9,7 +9,7 @@ host for the documentation and code used with the machine. We are using GrabCAD 
 
 # Thunderhead turns this:
 
-![Shedded PET](./img/shredded_pet.jpg?s=50)
+![Shedded PET](./img/shredded_pet.jpg?v=4&s=50)
 
 # Into this:
 
