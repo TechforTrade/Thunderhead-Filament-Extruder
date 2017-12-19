@@ -1,0 +1,7 @@
+Debug/*
+_vm/*
+.vs/*
+*.cppproj
+*.atsln
+*.componentinfo.xml
+*.7z
