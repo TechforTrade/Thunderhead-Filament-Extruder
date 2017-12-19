@@ -4,7 +4,7 @@ The Thunderhead filament extruder is a  small scale extruder designed by Techfor
 
 
 #### The Thunderhead converts clean and dry PET flake into 3D printing Filament
-<img src="./img/Flake_to_Filament.jpg" width="600" align="middle">
+<img src="./img/Flake_To_Filament.jpg" width="600" align="middle">
 
 
 
