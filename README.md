@@ -83,7 +83,7 @@ Note that you don't necessarily have to own all of these tools. A local shop cou
 <img src="./img/Extruder_Components.jpg" width="800" align="middle">
 
 1. **Control Box** - Contains the power supply, Arduino, and other circuitry needed to operate the extruder. Note: Other components such as the starve feeder and diameter sensors have their own control circuitry.
-2. **Starve Feeder**- Used to add flakes to the extruder at a constent rate. Subcomponents are:
+2. **Starve Feeder**- Used to add flakes to the extruder at a constent rate. The starve feeder has its own controller and communicates with the main microcontroller via IIC. Subcomponents are:
    1. Hopper - Holdes flake ready to be extruded
    2. Vibratory Conveyer - Moves flake to the balance and keeps flake from bridging, and rat holing.
    3. Balance - Weighs out small portions of flake and then delivers them to the extruder at a constant rate. Feedback from the balance controls the vibratory conveyer.
@@ -95,11 +95,11 @@ Note that you don't necessarily have to own all of these tools. A local shop cou
    4. Breaker plate - A small disk of metal with a number of holes drilled into it that acts to reduce the twist in the plastic that is caused by the screw. 
    5. Cooling tube - A brass tube at the end of the barrel that reduces the temperature of the plastic melt in order to increase its viscosity. The bend in the tube helps to aim the filament at the guide roller at the end of the water bath and improve roundness of the filament. It has two heating zones.
    6. Nozzle - determines diameter of melt as it leaves the extruder. Equiped with its own heating zone so that surface quality of the filament can be improved.
-5. Fume Hood - Used to collect fumes given off by the extruder and channel them into a tube.
-6. Diameter Sensors - Non contact laser diameter sensors with their own control electronics. The first is used to determine the diameter of the melt as it leaves the extruder and control the speed of the outfeed rollers in order to maintain a constant diameter. The second is used to moniter the final diameter and ensure that the set point of the first diameter sensor is correct.
-7. Water Bath - Used to cool the melt quickly. This is important because otherwise, the PET would neck down to a very small diameter or cool too slowly and crystalize. Crystalized plastic is too brittle to work with a 3D printer.
-8. Outfeed Rollers - Used to pull the filament through the water bath. Their speed determines the diameter of the filament.
-9. Spooler - Winds the filament up onto a spool. The spooler is still being worked on, early designs fought with the outfeed rollers and caused uneven filament diameters.
+5. **Fume Hood** - Used to collect fumes given off by the extruder and channel them into a tube.
+6. **Diameter Sensors** - Non contact laser diameter sensors with their own control electronics. The first is used to determine the diameter of the melt as it leaves the extruder and control the speed of the outfeed rollers in order to maintain a constant diameter. The second is used to monitor the final diameter and ensure that the set point of the first diameter sensor is correct. They communicate with the main microcontroller via IIC.
+7. **Water Bath** - Used to cool the melt quickly. This is important because otherwise, the PET would neck down to a very small diameter or cool too slowly and crystalize. Crystalized plastic is too brittle to work with a 3D printer.
+8. **Outfeed Rollers** - Used to pull the filament through the water bath. Their speed determines the diameter of the filament. The rollers are controlled by the primary diameter sensor.
+9. **Spooler** - Winds the filament up onto a spool. The spooler is still being worked on, early designs fought with the outfeed rollers and caused uneven filament diameters. Contains its own control electronics and communicates with the main microcontroller via IIC.
 
 
 
