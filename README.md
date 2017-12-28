@@ -66,15 +66,20 @@ You are responsible for your own safety.
 
 Please refer to our [wiki](https://github.com/TechforTrade/Thunderhead-Filament-Extruder/wiki) for detailed information on building the Thunderhead. 
 
-#### Tools Required####
+#### Major Tools Needed####
 
-Note that you don't necessairily have to own all of these tools. A local shop could some of the work for you. Especially the lathe and milling work.
+Note that you don't necessarily have to own all of these tools. A local shop could do some of the work for you. Especially the lathe and milling work. See the Wiki for a more exhaustive list.
 
 * Drill Press
-* Metal Lathe
-* Milling Machine
-* Welding (stick, oxy-acetalene, etc.) - for welding frames together
-* 3D printer
+* Metal Lathe - Threading the barrel and making the shaft for the gear box
+* Welding (stick, oxy-acetalene, etc.) - For welding frames together
+* 3D printer - Many of the complex parts in the machine are 3D printed
+* Milling Machine (optional) - For milling flats into a few parts. Could be done with grinder and hand files though more time consuming.
+* Horizontal band saw (optional) - For cutting stock metal to size. A hacksaw and vice will work, but will be slower.
+
+
+#### Major components of the Thunderhead
+
 
 
 
