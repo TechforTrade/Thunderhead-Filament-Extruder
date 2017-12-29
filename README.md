@@ -12,7 +12,7 @@ The Thunderhead filament extruder is a  small scale extruder designed by Techfor
 
 - [Goals](#goals)
 - [PET Plastic](#pet-plastic)
-- [Safety/Liability](#safety/liability)
+- [Safety/Liability](#safety-liability)
 - [Building the Thunderhead](#building-the-thunderhead)
 - [Software](#software)
 - [Operation](#operation)
