@@ -122,6 +122,43 @@ Additionally, there is code written in Processing called **Extruder_Data_visuali
 
 ## Operation
 
+Detailed operation instructions with tips and trouble shooting are located in our [wiki](https://github.com/TechforTrade/Thunderhead-Filament-Extruder/wiki). The following summarizes basic operation. Video of this process can be found here.
+
+#### Preparation
+
+Before extruding, the clean PET flake must be dried. This must happen just before extruding because the PET will absorb water out of the air at room temperature. Dry the PET in a bench top oven (toaster oven) at a temperature between 150 and 170 °C for four hours. Do this in a well ventilated area. It is recomended to capture and vent the fumes with a fume hood and duct. Do not exceed 175 °C as the plastic will begin to degrade. Keep the flake in the oven until the extruder is ready to begin extruding so that the flake is exposed to room temperature air for as little time as possible.
+
+#### Extruding
+
+Steps
+
+1. Power up the extruder. 
+2. Select the menu option "Select Profile". For this and all following steps:
+   1.  'A' is used to scroll up.
+   2. 'B' is used to scoll down.
+   3. 'C' is used to select.
+3. Select the profile you want.
+4. Select "Extrude".
+   1. The extruder will enter the Preheat state, and warm the heating zones to the initial set temps.
+5. When the initial set temps have been reached, the extruder will automatically enter the Soak state and soak for the number of minutes specified in the profile.
+6. While the extruder is in the Soak state do the following:
+   1. Remove the plastic from the oven and add it to the hopper.
+   2. Home the balance by rotating the balance counter clockwise as far as it will go and then selecting "Home Balance" from the menu.
+   3. Select "Feed Plastic" to turn the vibratory conveyer on.
+   4. Turn the vibratory conveyor off when the flake has moved to then end of the conveyor and is about to begin filling the bucket by selecting "Feed Plastic" again.
+7. At the end of the Soak state (default time is 8 minutes) the extruder will automatically enter the Extrude state.
+8. Turn on the starve feeder by selecting "Starve Feeder".
+9. When plastic begins to flow out of the nozzle, use the start up tool to guide the filament under the guide roller in the water bath and then place the filament between the outfeed rollers.
+10. Reduce the temperatures to the extruding temperatures (the cooling tube and nozzle temps are lowered) by selecting  "Set Extrude Temps" from the menu.
+11. Increase the diameter of the filament to the desired diameter by reducing the outfeed RPM. Do this by selecting "Outfeed RPM" and entering the desired rpm (typically around 18).
+12. Clip off the initial section of filament that is not of the correct diameter.
+13. Load the filament into the spooler and turn it on. 
+14. If desired, automatic control of the outfeed roller rpm can be engaged by selecting "OF Mode". It will change from "man" to "auto". The rpm of the outfeed rollers will now be automatically adjusted to maintain the "Dia Setpoint".
+
+#### Stopping the Extruder
+
+At any point during the extrusion (including preheat and soak) the extruder can be stopped by pressing 'D'. You will be asked to confirm by pressing 'A' or cancel by pressing 'B'. The machine can also simply be powered off.
+
 
 
 ## Contributing
