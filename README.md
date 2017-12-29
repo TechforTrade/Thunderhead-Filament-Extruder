@@ -12,7 +12,7 @@ The Thunderhead filament extruder is a  small scale extruder designed by Techfor
 
 - [Goals](#goals)
 - [PET Plastic](#pet-plastic)
-- [Safety/Liability](#safety-liability)
+- [Safety and Liability](#safety-and-liability)
 - [Building the Thunderhead](#building-the-thunderhead)
 - [Software](#software)
 - [Operation](#operation)
@@ -59,9 +59,11 @@ There are some challenges to working with PET plastic. A few these are described
 
 
 
-## Safety/Liability
 
-You are responsible for your own safety.
+
+## Safety and Liability
+
+You are responsible for your own safety. This machine is under development. Please see the text in the license regarding **Disclaimer of Warranties and Limitation of Liability**.
 
 
 
@@ -244,17 +246,13 @@ repository.
 The following people and organizations provided valuable help and guidance over
 the course of the project:
 
-**Matt Clark** who provided hundreds of free man hours to assist with the
-**re-design process.
+**Matt Clark** who provided hundreds of free man hours to assist with the re-design process.
 
-**Frank Schoofs** who volunteered his material science expertise to assist with
-**thermal modeling required to design heating and cooling sections of the extruder.
+**Frank Schoofs** who volunteered his material science expertise to assist with thermal modeling required to design heating and cooling sections of the extruder.
 
-**Vasileios Grammatikakis** an electronics expert who has assisted with
-**improvements to the Thunderhead electronics.
+**Vasileios Grammatikakis** an electronics expert who has assisted with improvements to the Thunderhead electronics.
 
-**Unilever plc.** whose PET specialists have provided insights into
-**working with PET, drying, and testing.
+**Unilever plc.** whose PET specialists have provided insights into working with PET, drying, and testing.
 
 ## 
 
