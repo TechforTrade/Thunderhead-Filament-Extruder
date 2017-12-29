@@ -8,18 +8,21 @@ The Thunderhead filament extruder is a  small scale extruder designed by Techfor
 
 
 
-## Table of Contents
+# Table of Contents
 
-- [Goals](#Goals)
-- [PET Plastic](#PET Plastic)
-- [Safety/Liability](#Safety/Liability)
-- [Building the Thunderhead](#Building the Thunderhead)
-- [Software](#Software)
-- [Operation](#Operation)
-- [Contributing](#Contributing)
-- [Maintainers](#Maintainers)
-- [Acknowledgements](#Acknowledgements)
-- [License](#License)
+- [Goals](#goals)
+- [PET Plastic](#pet-plastic)
+- [Safety/Liability](#safety/liability)
+- [Building the Thunderhead](#building-the-thunderhead)
+- [Software](#software)
+- [Operation](#operation)
+- [Contributing](#contributing)
+- [Maintainers](#maintainers)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+
+
 
 ## Goals
 The Thunderhead is designed with the intent of making it possible to recycle plastic from the post consumer waste stream into 3D printing filament on a small scale with minimal start up capital required. This makes the following possible:
@@ -135,8 +138,8 @@ Steps
 1. Power up the extruder. 
 2. Select the menu option "Select Profile". For this and all following steps:
    1.  'A' is used to scroll up.
-   2. 'B' is used to scoll down.
-   3. 'C' is used to select.
+   2.  'B' is used to scoll down.
+   3.  'C' is used to select.
 3. Select the profile you want.
 4. Select "Extrude".
    1. The extruder will enter the Preheat state, and warm the heating zones to the initial set temps.
@@ -167,71 +170,67 @@ We'd love your help! You can contribute in many ways. Here are a few:
 
 * Technical support on designs, code etc.
 * Help improve the wiki and other documentation.
+* Testing. Different Extrusion parameters, code, etc.
 * Connect us with other interested individuals and groups.
-* ​
+* Donate! [Techfortrade](http://www.techfortrade.org/) is a non profit organization working to create business opportunities in low resource settings.
+
+
 
 
 
 ## On Going Work
 
-All the present files can be found [here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
+All the of the most up to date CAD files can be found [here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
 
-## Planned Improvements
 
-### Drying hopper
 
+## Planned Improvements and Experiments ##
+
+#### Drying hopper ####
 Currently the plastic is dried and then put into the hopper where it sits and
 absorbs moisture. With a drying hopper, the plastic would be continuously dried
 and would have no chance to absorb moisture before entering the machine. This
-may help improve the melt viscosity by reducing the amount of polymer
+may help improve the melt viscosity and consistency by reducing the amount of polymer
 hydrolysis.
 
-### Non Contact Diameter Sensor
 
-In order to effectively control the diameter by varying the speed of the outfeed
-rollers, the diameter must be measured at or close to the point where changes in
-roller speed have the greatest effect on the diameter. This is in a location
-where the plastic cannot be touched, just below the nozzle and above the surface
-of the water. Using a laser and a CCD array, the diameter could be measured by
-taking a picture of the shadow of the plastic melt as it enters the water bath.
-The gap between the water bath and the nozzle is only about 10 mm so the sensor
-will be partially submerged in water. It will need to be waterproof.
 
-### New Filament support/guiding strategy
-
+#### New Filament support/guiding strategy ####
 The shape and diameter of the filament is essentially set when the hot plastic
 enters the water bath. Unwanted movement of the filament down stream from this
 point can greatly impact the shape of the filament. New strategies for guiding
-the filament in a controlled manner need to be explored. The shape of the
-filament is also heavily impacted by the large guide wheel which it contacts
-just after it enters the water. Are there other ways to support the filament as
-it moves through the water bath that result in more consistent shape?
+the filament in a controlled manner need to be explored. 
 
-### Nozzle Geometry and Drawdown
 
+
+#### Nozzle Geometry and Drawdown ####
 It may be fruitful to explore different nozzle geometries and the amount and
 rate of drawdown. What are the optimal conditions for consistent filament?
 
-### Test different sources of PET
 
+
+#### Test different sources of PET ####
 Not all PET resins are the same. By testing resins from various bottle sources
 and even virgin pellets, it may be possible to determine whether or not some
 sources have more desirable characteristics than others.
 
-### Melt Filter
 
+
+#### Melt Filter ####
 A screen should be added just up stream of the breaker plate. This screen will
-catch debris and improve the quality of the filament.
+catch debris and improve the quality of the filament. A down side is that a melt filter may reduce, perhaps greatly, the output of the machine.
 
-### Explore potential additives
+
+
+#### Explore potential additives
 
 Desiccating agents such as CaO (quicklime) or even Portland cement might
 possibly be added to scavenge water remaining in the melt, which would help
 improve viscosity. Nucleating agents such as sodium benzoate and talc might be
 used to encourage crystal growth, growing more numerous and smaller crystals
-which may help to reduce the brittleness of crystalline polymer.
+which may help to reduce the brittleness of crystalline polymer. Could this be a route to producing printable crystalline PET?
 
-
+ 
 
 ## Maintainers
 
