@@ -182,13 +182,16 @@ We'd love your help! You can contribute in many ways. Here are a few:
 
 ## On Going Work
 
-All the of the most up to date CAD files can be found [here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U).
+All the of the most up to date CAD files can be found [here on our GrabCAD Workbench](https://workbench.grabcad.com/workbench/projects/gcvN9Xsi01SW-lFGhJRj_-4vqndCMFAaoUt_-UQBdidnVn#/space/gc8b8c582LagITdwrMEId6wysTlJX_nukUvWoRwEQ_1f4U). The following are a few ideas that we are hoping to pursue:
 
+### Planned Improvements and Experiments ###
 
+#### Feedback Control####
 
-## Planned Improvements and Experiments ##
+The non-contact diameter sensors are now working so we can get real time information on diameter. The code for using feedback control to maintain constant diameter is also mostly in place. What needs to be done now is to find the correct  placement of the sensor and tune the PID. 
 
 #### Drying hopper ####
+
 Currently the plastic is dried and then put into the hopper where it sits and
 absorbs moisture. With a drying hopper, the plastic would be continuously dried
 and would have no chance to absorb moisture before entering the machine. This
@@ -197,7 +200,7 @@ hydrolysis.
 
 
 
-#### New Filament support/guiding strategy ####
+#### New Filament Support/Guiding Strategy ####
 The shape and diameter of the filament is essentially set when the hot plastic
 enters the water bath. Unwanted movement of the filament down stream from this
 point can greatly impact the shape of the filament. New strategies for guiding
@@ -211,7 +214,7 @@ rate of drawdown. What are the optimal conditions for consistent filament?
 
 
 
-#### Test different sources of PET ####
+#### Test Different Sources of PET ####
 Not all PET resins are the same. By testing resins from various bottle sources
 and even virgin pellets, it may be possible to determine whether or not some
 sources have more desirable characteristics than others.
