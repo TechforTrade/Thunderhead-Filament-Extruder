@@ -100,8 +100,7 @@ Note that you don't necessarily have to own all of these tools. A local shop cou
    4. Breaker plate - A small disk of metal with a number of holes drilled into it at the downstream end of the barrel. It acts to reduce the twist in the plastic that is caused by the screw, reducing what is called "screw beat" and improving the uniformity of the diameter. 
    5. Cooling tube - A brass tube at the end of the barrel that reduces the temperature of the plastic melt in order to increase its viscosity. The bend in the tube helps to aim the filament at the guide roller at the end of the water bath and improve roundness of the filament. It has two heating zones.
    6. Nozzle - determines diameter of melt as it leaves the extruder. Equiped with its own heating zone so that surface quality of the filament can be improved.
-   7. Fume hood - Used to collect fumes given off by the extruder and channel them into a tube.
-5. **Extruder Stand** - Supports the extruder. 
+5. **Extruder Stand** - Supports the extruder and has a sheet metal enclosure to collect fumes given off by the extruder.
 6. **Diameter Sensors** - Non contact laser diameter sensors with their own control electronics. The first is used to determine the diameter of the melt as it leaves the extruder and control the speed of the outfeed rollers in order to maintain a constant diameter. The second is used to monitor the final diameter and ensure that the set point of the first diameter sensor is correct.
 7. **Water Bath** - Used to cool the melt quickly. This is important because otherwise, the PET would neck down to a very small diameter or cool too slowly and crystalize. Crystalized plastic is too brittle to work with a 3D printer.
 8. **Outfeed Rollers** - Used to pull the filament through the water bath. Their speed determines the diameter of the filament. The rollers are controlled by the primary diameter sensor.
