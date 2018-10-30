@@ -174,7 +174,7 @@ We'd love your help! You can contribute in many ways. Here are a few:
 * Testing. Different Extrusion parameters, code, etc.
 * Connect us with other interested individuals and groups.
 * Donate! [Techfortrade](http://www.techfortrade.org/) is a non profit organization working to create business opportunities in low resource settings.
-[![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UYUYATZJ2RAGN)
+<a href="https://www.globalgiving.org/projects/digital-blacksmiths-3d-printing-from-trash/"><img src="https://www.globalgiving.org/img/buttons/donate_now.png" alt="Donate Now"/></a>
 
 
 
