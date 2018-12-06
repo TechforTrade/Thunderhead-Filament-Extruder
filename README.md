@@ -102,8 +102,8 @@ Note that you don't necessarily have to own all of these tools. A local shop cou
    6. Nozzle - determines diameter of melt as it leaves the extruder. Equiped with its own heating zone so that surface quality of the filament can be improved.
 5. **Extruder Stand** - Supports the extruder and has a sheet metal enclosure to collect fumes given off by the extruder.
 6. **Diameter Sensors** - Non contact laser diameter sensors with their own control electronics. The first is used to determine the diameter of the melt as it leaves the extruder and control the speed of the outfeed rollers in order to maintain a constant diameter. The second is used to monitor the final diameter and ensure that the set point of the first diameter sensor is correct.
-7. **Water Bath** - Used to cool the melt quickly. This is important because otherwise, the PET would neck down to a very small diameter or cool too slowly and crystalize. Crystalized plastic is too brittle to work with a 3D printer.
-8. **Outfeed Rollers** - Used to pull the filament through the water bath. Their speed determines the diameter of the filament. The rollers are controlled by the primary diameter sensor.
+7. **Outfeed Rollers** - Used to pull the filament through the water bath. Their speed determines the diameter of the filament. The rollers are controlled by the primary diameter sensor.
+8. **Water Bath** - Used to cool the melt quickly. This is important because otherwise, the PET would neck down to a very small diameter or cool too slowly and crystalize. Crystalized plastic is too brittle to work with a 3D printer.
 9. **Spooler** - Winds the filament up onto a spool. The spooler is still being worked on, early designs fought with the outfeed rollers and caused uneven filament diameters.
 
 
