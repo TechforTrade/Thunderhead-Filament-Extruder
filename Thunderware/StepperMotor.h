@@ -21,12 +21,6 @@ class Configuration;
 class StepperMotor
 {
   public:
-//    enum PinSet {
-//      SET_3_14_8 = 0,// wired to auger motor, pins: step->3, dir->14, enable->8 
-//      SET_11_15_12,//wired to outfeed motor, pins: step->11, dir->15, enable->12
-//      SET_10_16_9,//wired to spooler motor, pins: step->10, dir->16, enable->9
-//      //STARVE_FEEDER,
-//    };
     int pinSet;
     StepperMotor(Configuration* configuration, int pinSet);//constructor
     void setRPM(double rpm);

@@ -82,12 +82,12 @@ void (*state_table[])() = {
 };
 
 // lcd pins
-const byte LCD_RS  = 22;
-const byte LCD_EN  = 24;
-const byte LCD_D4  = 26;
-const byte LCD_D5  = 28;
-const byte LCD_D6  = 30;
-const byte LCD_D7  = 32;
+const byte LCD_RS  = 30;//22;
+const byte LCD_EN  = 34;//24;
+const byte LCD_D4  = 44;//26;
+const byte LCD_D5  = 46;//28;
+const byte LCD_D6  = 48;//30;
+const byte LCD_D7  = 50;//32;
 
 
 const byte LCD_ROWS = 4;

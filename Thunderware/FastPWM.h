@@ -15,13 +15,6 @@
 class FastPWM
 {
   public:
-//    enum PinSet {
-//      SET_3_14_8 = 0,// wired to auger motor, pins: step(PU-)->6, dir(DR-)->14, enable(MF-)->8 
-//      SET_11_15_12,//wired to outfeed motor, pins: step->11, dir->15, enable->12
-//      SET_10_16_9,//wired to spooler motor, pins: step->10, dir->16, enable->9
-//      //STARVE_FEEDER,
-//    };
-
     FastPWM(int pinSet);
     void setFrequency(float frequency);
     float getFrequency();

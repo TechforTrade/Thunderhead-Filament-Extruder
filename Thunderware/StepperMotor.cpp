@@ -24,15 +24,18 @@ StepperMotor::StepperMotor(Configuration* configuration, int pinSet) : _timer(pi
   switch (_pinSet){
     case 0://SET_8_14_6
       _ratio = (float)_configuration->physical.augerStepMode*(float)_configuration->physical.augerGearRatio;
-      DDRJ |= B00000010; //Direction, Pin 14 to output
+      // Old direction code DDRJ |= B00000010; //Direction, Pin 14 to output
+      pinMode(D5, OUTPUT);//Direction pin
       DDRH |= B00001000; // Step pin 6 to output
       DDRH |= B00100000;//Enable pin 8 to output
 
       //set Auger Stepper direction (pin 14)
       if (_configuration->physical.augerDirection){
-        PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+        //PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+        digitalWrite(D5, HIGH);
       }else{
-        PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+        //PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+        digitalWrite(D5, LOW);
       }
 
       break;
@@ -206,9 +209,11 @@ void StepperMotor::setDirection(){
 		  case 0://SET_8_14_6
 		  //set Auger Stepper direction (pin 14)
 		  if (_configuration->physical.augerDirection){
-			  PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+			  //PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+        digitalWrite(D5, HIGH);
 			  }else{
-			  PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+			  //PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+        digitalWrite(D5, LOW);
 		  }
 
 		  break;

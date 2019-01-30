@@ -108,7 +108,7 @@ void Configuration::loadDefaultConfig()
   physical.spoolerMotorRollerRadius = 20.34/2;//relative to wooden disk radius
 
   //Zone 1 heater
-  physical.zone1.heaterPin = 7;
+  physical.zone1.heaterPin = 12; //was 7
   physical.zone1.Kd = 0.0;
   physical.zone1.Ki = 0.15;
   physical.zone1.Kp = 3.4;
@@ -125,7 +125,7 @@ void Configuration::loadDefaultConfig()
   physical.zone1.activeCooling = false;
 
   //Zone 2 heater
-  physical.zone2.heaterPin = 2; //should be changed
+  physical.zone2.heaterPin = 11; //was D2
   physical.zone2.Kd = 0.0;
   physical.zone2.Ki = 0.15;
   physical.zone2.Kp = 3.4;
@@ -142,7 +142,7 @@ void Configuration::loadDefaultConfig()
   physical.zone2.activeCooling = false;
 
   //Zone 3 heater
-  physical.zone3.heaterPin = 3;
+  physical.zone3.heaterPin = 10;//Was D3
   physical.zone3.Kd = 0.0;
   physical.zone3.Ki = 0.15;
   physical.zone3.Kp = 3.4;
@@ -160,7 +160,7 @@ void Configuration::loadDefaultConfig()
   physical.zone3.activeCooling = false;
 
   //Zone 4 heater
-  physical.zone4.heaterPin = 4;
+  physical.zone4.heaterPin = 9;//was D4
   physical.zone4.Kd = 0.0;
   physical.zone4.Ki = 0.15;
   physical.zone4.Kp = 3.4;
