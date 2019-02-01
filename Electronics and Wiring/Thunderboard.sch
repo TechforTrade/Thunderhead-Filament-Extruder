@@ -12225,8 +12225,8 @@ grid 2.54 mm</description>
 <part name="Q2" library="Edited Parts" deviceset="TIP120" device="" package3d_urn="urn:adsk.eagle:package:29488/1"/>
 <part name="Q3" library="Edited Parts" deviceset="TIP120" device="" package3d_urn="urn:adsk.eagle:package:29488/1"/>
 <part name="5V-PIEZO-BUZZER" library="SparkFun-Electromechanical" deviceset="BUZZER" device="-PTH"/>
-<part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="TO92-EBC" package3d_urn="urn:adsk.eagle:package:29915/2" value="2n2222"/>
-<part name="R9" library="resistor - edit" deviceset="R-US_" device="0207/7" package3d_urn="urn:adsk.eagle:package:25942/1" value="1K"/>
+<part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="TO92-EBC" package3d_urn="urn:adsk.eagle:package:29915/2" value="PN2222A"/>
+<part name="R9" library="resistor - edit" deviceset="R-US_" device="0207/7" package3d_urn="urn:adsk.eagle:package:25942/1" value="3K"/>
 <part name="IIC-1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="" package3d_urn="urn:adsk.eagle:package:38085/1"/>
 <part name="IIC-2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="" package3d_urn="urn:adsk.eagle:package:38085/1"/>
 <part name="IIC-3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="" package3d_urn="urn:adsk.eagle:package:38085/1"/>
