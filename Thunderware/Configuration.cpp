@@ -26,10 +26,10 @@ void Configuration::loadDefaultProfile() {
   profile.gramsPerMin = 8.0;
 
   //Auger
-  profile.augerRPM = 40.0;
+  profile.augerRPM = 0.0;
 
   //Outfeed
-  profile.outfeedRPM = 30;
+  profile.outfeedRPM = 0;
 
 
 
@@ -37,17 +37,17 @@ void Configuration::loadDefaultProfile() {
   profile.soakTime = 8.0;// minutes for barrel to remain at set point before extruding
 
   //heat Zones
-  profile.zone1InitialSetTemp = 265.0;
-  profile.zone2InitialSetTemp = 265.0;
-  profile.zone3InitialSetTemp = 265.0;
-  profile.zone4InitialSetTemp = 265.0;
-  profile.zone5InitialSetTemp = 265.0;
+  profile.zone1InitialSetTemp = 0.0;
+  profile.zone2InitialSetTemp = 0.0;
+  profile.zone3InitialSetTemp = 0.0;
+  profile.zone4InitialSetTemp = 0.0;
+  profile.zone5InitialSetTemp = 0.0;
   
-  profile.zone1SetTemp = 265.0;
-  profile.zone2SetTemp = 250.0;
-  profile.zone3SetTemp = 193.0;
-  profile.zone4SetTemp = 193.0;
-  profile.zone5SetTemp = 260.0;
+  profile.zone1SetTemp = 0.0;
+  profile.zone2SetTemp = 0.0;
+  profile.zone3SetTemp = 0.0;
+  profile.zone4SetTemp = 0.0;
+  profile.zone5SetTemp = 0.0;
 
   //Safety parameters
   profile.minExtrudeTemp = 180; //The minimum temp allowed for extrusion

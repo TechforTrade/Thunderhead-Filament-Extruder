@@ -1,9 +1,6 @@
 /*
-Outfeed.h - Library for activating the the  heaters.
+QCDiaSensor.h - Library for controling the QC diameter sensor
 
-
-Created by Matthew P. Rogge, February 12, 2014.
-Released into the public domain.
 */
 #ifndef Outfeed_h
 #define Outfeed_h
