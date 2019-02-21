@@ -134,7 +134,7 @@ StepperMotor auger(&configuration, configuration.physical.augerPinSet);
 Outfeed outfeed(&configuration.physical.diaSensorRegMap);
 QCDiaSensor qcDiameterSensor(&configuration.physical.qcDiaSensorRegMap);
 
-Spooler spooler(&configuration);
+//Spooler spooler(&configuration);
 
 Safety safety(&configuration);
 
@@ -161,15 +161,16 @@ void setup()
   lcd.begin(20, 4); //Start up LCD
   lcd.clear();
   activeMenu = &mainMenu;
-  buzzer.setMsg(Buzzer::POWER_ON);
   currentState = STANDBY;
+
   auger.disable(); // Why is this necessary. If not here, there is high frequency signal on the auger step pin.
+
   configuration.loadConfig();
   activeMenu->reset();
-  spooler.disable();
+  //  spooler.disable();
   outfeed.disable();
-  pinMode(1, OUTPUT);
-  digitalWrite(1, LOW);
+
+  buzzer.setMsg(Buzzer::POWER_ON);
 }
 
 // Timing variables used for data display
@@ -189,10 +190,25 @@ void loop() {
   if (key) {
     //Serial.print("freeMemory()=");
     //Serial.println(freeMemory());
-    //Serial.println(key);
+    Serial.println(key);
   }
 
   switch (key) {
+    case '#':
+
+      zone3.setDutyCycle(zone3.getDutyCycle()+25);
+      zone4.setDutyCycle(zone4.getDutyCycle()+25);
+      zone5.setDutyCycle(zone5.getDutyCycle()+25);
+      lcd.setCursor(0,0);
+      lcd.print(zone3.getDutyCycle());
+      break;
+    case '*':
+      zone3.setDutyCycle(zone3.getDutyCycle()-25);
+      zone4.setDutyCycle(zone4.getDutyCycle()-25);
+      zone5.setDutyCycle(zone5.getDutyCycle()-25);
+      lcd.setCursor(0,0);
+      lcd.print(zone3.getDutyCycle());
+      break;
     case 'A':
     case 'q':
       activeMenu->up();
@@ -218,9 +234,9 @@ void loop() {
       activeMenu->decrease();
       break;
 
-    case '*'://reset LCD. Use when lcd goes crazy
-      lcd.begin(20, 4);
-      activeMenu->display();
+//    case '*'://reset LCD. Use when lcd goes crazy
+//      lcd.begin(20, 4);
+//      activeMenu->display();
       break;
   }
 
@@ -241,19 +257,19 @@ void loop() {
       qcDiameterSensor.readDia();
 
       //Print data to serial so that Processing can graph it.
-      Serial.print((now - extrudeStartTime) / 1000);
-      Serial.print("\t");
-      Serial.print(outfeed.getDia(), 4);
-      Serial.print("\t");
-      Serial.print(qcDiameterSensor.getDia(), 4);
-      Serial.print("\t");
-      Serial.println(outfeed.getRPM(), 2);
+      //      Serial.print((now - extrudeStartTime) / 1000);
+      //      Serial.print("\t");
+      //      Serial.print(outfeed.getDia(), 4);
+      //      Serial.print("\t");
+      //      Serial.print(qcDiameterSensor.getDia(), 4);
+      //      Serial.print("\t");
+      //      Serial.println(outfeed.getRPM(), 2);
 
       //Advance the time
       reportDiaTime = millis() + reportDiaInterval;
     }
   }
-  
+
   if (now >= refreshDisplayTime) {
     //update display variables
     //Temps
@@ -318,9 +334,7 @@ void loop() {
     refreshDisplayTime = millis() + 1000L;
 
     activeMenu->display();
-
   }
-
 }
 
 
@@ -460,8 +474,10 @@ void resetEEPROM() {
 }
 
 void actionExtrude() {
-  currentState = BEGIN_PREHEAT;
-  activeMenu = &preheatMenu;
+  //  currentState = BEGIN_PREHEAT;
+  //  activeMenu = &preheatMenu;
+  currentState = BEGIN_EXTRUDE;
+  activeMenu = &extrudeMenu;
   activeMenu->reset();
 }
 
@@ -528,7 +544,7 @@ void confirmStopExtruding() {
       zone3.off();
       zone4.off();
       zone5.off();
-      spooler.disable();
+      //      spooler.disable();
       Serial.println("Stop");
       //change the state to standby
       currentState = STANDBY;
@@ -696,10 +712,10 @@ void toggleSpoolerState() {
   if (spoolerState[1] == 'f') {
     strcpy(spoolerState, "On");
     outfeed.reset();
-    spooler.on();
+    //    spooler.on();
   } else {
     strcpy(spoolerState, "Off");
-    spooler.off();
+    //    spooler.off();
   }
   activeMenu->display();
 }
@@ -714,6 +730,7 @@ void setTempsToExtrudeVals() {
 }
 
 void setZone1Temp() {
+  zone1.setMode(AUTOMATIC);
   if (currentState == PREHEAT || currentState == SOAK) {
     configuration.physical.zone1.setTemp = configuration.profile.zone1InitialSetTemp;
   } else {
@@ -721,6 +738,7 @@ void setZone1Temp() {
   }
 }
 void setZone2Temp() {
+  zone2.setMode(AUTOMATIC);
   if (currentState == PREHEAT || currentState == SOAK) {
     configuration.physical.zone2.setTemp = configuration.profile.zone2InitialSetTemp;
   } else {
@@ -728,6 +746,7 @@ void setZone2Temp() {
   }
 }
 void setZone3Temp() {
+  zone3.setMode(AUTOMATIC);
   if (currentState == PREHEAT || currentState == SOAK) {
     configuration.physical.zone3.setTemp = configuration.profile.zone3InitialSetTemp;
   } else {
@@ -735,6 +754,7 @@ void setZone3Temp() {
   }
 }
 void setZone4Temp() {
+  zone4.setMode(AUTOMATIC);
   if (currentState == PREHEAT || currentState == SOAK) {
     configuration.physical.zone4.setTemp = configuration.profile.zone4InitialSetTemp;
   } else {
@@ -742,6 +762,7 @@ void setZone4Temp() {
   }
 }
 void setZone5Temp() {
+  zone5.setMode(AUTOMATIC);
   if (currentState == PREHEAT || currentState == SOAK) {
     configuration.physical.zone5.setTemp = configuration.profile.zone5InitialSetTemp;
   } else {
@@ -764,7 +785,7 @@ void measureFilament() {
     //Stop is there is any serial input
     if (Serial.available() > 0) {
       outfeed.setRPM(0.0);
-      spooler.off();
+      //      spooler.off();
       activeMenu->display();
       return;
     }

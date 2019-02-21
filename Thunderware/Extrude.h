@@ -55,8 +55,8 @@ void beginLoadFilament() {
   if (configuration.profile.outfeedRPM > 0.0) {
     outfeed.setRPM(configuration.profile.outfeedRPM);
     outfeed.setMode(MANUAL);
-    spooler.setRPM();
-    spooler.enable();
+//    spooler.setRPM();
+//    spooler.enable();
     /*	starveFeeder.dump();//Make sure that the sensor begins blocked*/
     /*    starveFeeder.on();*/
   }
@@ -95,11 +95,17 @@ void loadFilament() {
 //setup for extruding
 void beginExtrude() {
 //  //Set the temperatures of the heating zones to their extrusion temperatures.
-//  configuration.physical.zone1.setTemp = configuration.profile.zone1SetTemp;
-//  configuration.physical.zone2.setTemp = configuration.profile.zone2SetTemp;
-//  configuration.physical.zone3.setTemp = configuration.profile.zone3SetTemp;
-//  configuration.physical.zone4.setTemp = configuration.profile.zone4SetTemp;
-//  configuration.physical.zone5.setTemp = configuration.profile.zone5SetTemp;
+  //Then set heater PIDs to automatic
+  zone1.setMode(AUTOMATIC);
+  zone2.setMode(AUTOMATIC);
+  zone3.setMode(AUTOMATIC);
+  zone4.setMode(AUTOMATIC);
+  zone5.setMode(AUTOMATIC);
+  configuration.physical.zone1.setTemp = configuration.profile.zone1SetTemp;
+  configuration.physical.zone2.setTemp = configuration.profile.zone2SetTemp;
+  configuration.physical.zone3.setTemp = configuration.profile.zone3SetTemp;
+  configuration.physical.zone4.setTemp = configuration.profile.zone4SetTemp;
+  configuration.physical.zone5.setTemp = configuration.profile.zone5SetTemp;
 
   //Set motor RPMs and enable motors
   auger.enable();
@@ -147,7 +153,7 @@ void extrude() {
 void stopExtruding() {
   auger.disable();
   outfeed.setRPM(0.0);
-  spooler.disable();
+//  spooler.disable();
   zone1.off();
   zone2.off();
   zone3.off();

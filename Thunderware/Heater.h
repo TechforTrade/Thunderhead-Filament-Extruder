@@ -1,8 +1,5 @@
 /*
-  Heater.h - Library for activating the the barrel heater.
- The barrel heater is a 120 v 130 w heating element powered
- by an electro-mechanical relay. The relay coil is optically 
- isolated from the logic circuits and is activated by pin 7.
+  Heater.h - Library for activating the the  heaters.
  
  Created by Matthew P. Rogge, Februrary 12, 2014.
  Released into the public domain.
@@ -31,6 +28,7 @@ public:
   float getTemp();
   void off();
   void setMode(int mode);
+  int getMode();
 
 private:
 

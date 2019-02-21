@@ -25,17 +25,17 @@ StepperMotor::StepperMotor(Configuration* configuration, int pinSet) : _timer(pi
     case 0://SET_8_14_6
       _ratio = (float)_configuration->physical.augerStepMode*(float)_configuration->physical.augerGearRatio;
       // Old direction code DDRJ |= B00000010; //Direction, Pin 14 to output
-      pinMode(D5, OUTPUT);//Direction pin
+      pinMode(5, OUTPUT);//Direction pin
       DDRH |= B00001000; // Step pin 6 to output
       DDRH |= B00100000;//Enable pin 8 to output
 
       //set Auger Stepper direction (pin 14)
       if (_configuration->physical.augerDirection){
         //PORTJ |= B00000010;// Direction is forward so set the pin HIGH
-        digitalWrite(D5, HIGH);
+        digitalWrite(5, HIGH);
       }else{
         //PORTJ &= B11111101; // Direction is Backward so set the pin LOW
-        digitalWrite(D5, LOW);
+        digitalWrite(5, LOW);
       }
 
       break;
@@ -112,7 +112,7 @@ float StepperMotor::getRPM(){return _rpm;}
 void StepperMotor::enable() {
 
   switch (_pinSet){
-    case 0://SET_3_14_8
+    case 0://SET_6_7_8
       //Auger Stepper pin 8
       //disable is backwards for the KL stepper driver being used. Set LOW
       if (_configuration->physical.augerEnable){
@@ -158,7 +158,7 @@ void StepperMotor::enable() {
 
 void StepperMotor::disable() {
   switch (_pinSet){
-    case 0://SET_3_14_8
+    case 0://SET_6_7_8
       //Auger Stepper pin 3
       if (!_configuration->physical.augerEnable){
         PORTH |= B00100000;
@@ -206,14 +206,14 @@ void StepperMotor::disable() {
 void StepperMotor::setDirection(){
 
 	  switch (_pinSet){
-		  case 0://SET_8_14_6
+		  case 0://SET_8_7_6
 		  //set Auger Stepper direction (pin 14)
 		  if (_configuration->physical.augerDirection){
 			  //PORTJ |= B00000010;// Direction is forward so set the pin HIGH
-        digitalWrite(D5, HIGH);
+        digitalWrite(5, HIGH);
 			  }else{
 			  //PORTJ &= B11111101; // Direction is Backward so set the pin LOW
-        digitalWrite(D5, LOW);
+        digitalWrite(5, LOW);
 		  }
 
 		  break;

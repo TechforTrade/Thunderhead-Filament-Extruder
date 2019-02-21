@@ -295,7 +295,7 @@ void Menu::display()
 			}
 
 //      if(printToSerialMonitor){
-      if(1){//there is a bug here. For some unknown reason, printToSerialMonitor gets written to False at some point no idea why.
+      if(0){//there is a bug here. For some unknown reason, printToSerialMonitor gets written to False at some point no idea why.
 				Serial.println(_text);
 			}
 			_lcd->setCursor(0, i);

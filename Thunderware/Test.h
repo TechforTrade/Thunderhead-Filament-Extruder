@@ -784,11 +784,11 @@ void testStarveFeeder(){
 }
 
 void testSpooler(){
-	spooler.setRPM(10);
-	spooler.enable();
-	delay(6000);
-	spooler.disable();
-	activeMenu->display();
+//	spooler.setRPM(10);
+//	spooler.enable();
+//	delay(6000);
+//	spooler.disable();
+//	activeMenu->display();
 // 	lcd.clear();
 // 	lcd.print(F("WARNING: The Spooler"));
 // 	lcd.setCursor(0,1);

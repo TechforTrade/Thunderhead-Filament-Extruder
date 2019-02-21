@@ -151,7 +151,6 @@ void Configuration::loadDefaultConfig()
   physical.zone3.thermistorBCoefficient = 3950;
   physical.zone3.thermistorNumSamples = 20;
   physical.zone3.thermistorPin = 3;
-  //	physical.zone3.coolerPin = 3;///
   physical.zone3.thermistorRNom = 100000;
   physical.zone3.thermistorSeriesResistor = 1000;
   physical.zone3.timeBase = 2000;
@@ -177,7 +176,7 @@ void Configuration::loadDefaultConfig()
   physical.zone4.activeCooling = false;
 
   //Zone 5 heater
-  physical.zone5.heaterPin = 5;
+  physical.zone5.heaterPin = 8;//was 5
   physical.zone5.Kd = 0.0;
   physical.zone5.Ki = 0.15;
   physical.zone5.Kp = 3.4;
@@ -215,8 +214,8 @@ void Configuration::loadDefaultConfig()
 Configuration::Configuration()
 {
   loadProfileNames();
-  //loadDefaultConfig();
-  loadConfig();
+  loadDefaultConfig();
+  //loadConfig();
 }
 
 
