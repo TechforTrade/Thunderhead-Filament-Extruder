@@ -9,10 +9,7 @@
   Released into the public domain.
 
 
-  Thoughts:
-  Add a bit to pid.calculate() that limits the amount by which the output can be changed per cycle.
-  This should keep the PID from making drastic changes causing bumps in the filament. It could be a useful way
-  to gradually bring the filament to the setpoint.
+Note: This firmware is setup for use with the earlier breadboard based version of the electronics
 
 */
 #include <stdio.h>
