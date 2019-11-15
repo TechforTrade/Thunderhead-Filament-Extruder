@@ -7,6 +7,7 @@
 #ifndef Heater_h
 #define Heater_h
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "Thermistor.h"
 #include "PID_v1.h"
@@ -51,4 +52,3 @@ private:
 };
 
 #endif
-

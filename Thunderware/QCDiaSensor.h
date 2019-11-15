@@ -5,6 +5,7 @@ Released into the public domain.
 #ifndef QCDiaSensor_h
 #define QCDiaSensor_h
 
+#include "definitions.h"
 #include "Arduino.h"
 #include <Wire.h>
 #include "Configuration.h"

@@ -9,6 +9,7 @@
 #ifndef FastPWM_h
 #define FastPWM_h
 
+#include "definitions.h"
 #include "Arduino.h"
 
 

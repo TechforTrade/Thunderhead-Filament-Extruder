@@ -8,6 +8,7 @@ Created by Matthew P. Rogge, Februrary 12, 2014.
 Released into the public domain.
 */
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "StarveFeeder.h"
 

@@ -1,6 +1,7 @@
 #ifndef Preheat_h
 #define Preheat_h
 
+#include "definitions.h"
 #include "Safety.h"
 #include "TestReporting.h"
 
@@ -113,4 +114,3 @@ void soak() {
 
 
 #endif // Preheat_h
-

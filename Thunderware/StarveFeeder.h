@@ -10,6 +10,7 @@
 #ifndef StarveFeeder_h
 #define StarveFeeder_h
 
+#include "definitions.h"
 #include "Arduino.h"
 #include <Wire.h>
 #include "Configuration.h"
@@ -76,4 +77,3 @@ class StarveFeeder
 };
 
 #endif
-

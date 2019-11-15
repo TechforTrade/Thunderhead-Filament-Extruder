@@ -9,6 +9,7 @@
   Released into the public domain.
 */
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "StepperMotor.h"
 //#include "config.h"
@@ -24,18 +25,29 @@ StepperMotor::StepperMotor(Configuration* configuration, int pinSet) : _timer(pi
   switch (_pinSet){
     case 0://SET_8_14_6
       _ratio = (float)_configuration->physical.augerStepMode*(float)_configuration->physical.augerGearRatio;
-      // Old direction code DDRJ |= B00000010; //Direction, Pin 14 to output
+      
+#ifdef OLD_PINS      
+      DDRJ |= B00000010; //Direction, Pin 14 to output
+#else
       pinMode(5, OUTPUT);//Direction pin
+#endif
+
       DDRH |= B00001000; // Step pin 6 to output
       DDRH |= B00100000;//Enable pin 8 to output
 
       //set Auger Stepper direction (pin 14)
       if (_configuration->physical.augerDirection){
-        //PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+#ifdef OLD_PINS
+        PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+#else
         digitalWrite(5, HIGH);
+#endif
       }else{
-        //PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+#ifdef OLD_PINS
+        PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+#else
         digitalWrite(5, LOW);
+#endif
       }
 
       break;
@@ -209,11 +221,17 @@ void StepperMotor::setDirection(){
 		  case 0://SET_8_7_6
 		  //set Auger Stepper direction (pin 14)
 		  if (_configuration->physical.augerDirection){
-			  //PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+#ifdef OLD_PINS
+			  PORTJ |= B00000010;// Direction is forward so set the pin HIGH
+#else
         digitalWrite(5, HIGH);
+#endif
 			  }else{
-			  //PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+#ifdef OLD_PINS  
+			  PORTJ &= B11111101; // Direction is Backward so set the pin LOW
+#else
         digitalWrite(5, LOW);
+#endif
 		  }
 
 		  break;
@@ -257,4 +275,3 @@ void StepperMotor::setDirection(){
 	  }
 
 }
-

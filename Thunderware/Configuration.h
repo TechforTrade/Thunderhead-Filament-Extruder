@@ -12,6 +12,7 @@
 #ifndef Configuration_h
 #define Configuration_h
 
+#include "definitions.h"
 #include "Arduino.h"
 
 class Configuration
@@ -194,5 +195,3 @@ class Configuration
 };
 
 #endif
-
-

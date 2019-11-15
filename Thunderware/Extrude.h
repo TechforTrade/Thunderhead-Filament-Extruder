@@ -2,6 +2,7 @@
 #ifndef Extrude_h
 #define Extrude_h
 
+#include "definitions.h"
 #include "Preheat.h"
 #include "StarveFeeder.h"
 #include "TestReporting.h"
@@ -109,7 +110,9 @@ void beginExtrude() {
 
   //Set motor RPMs and enable motors
   auger.enable();
-  auger.setRPM(configuration.profile.augerRPM);
+  //auger.setRPM(configuration.profile.augerRPM);
+  auger.setRPM(0);//Start auger at 0 RPM to avoid dangerous extrude
+  
   outfeed.setMode(MANUAL);
   outfeed.setRPM(configuration.profile.outfeedRPM);
   outfeed.setTunings();
@@ -164,7 +167,3 @@ void stopExtruding() {
 
 
 #endif // Extrude_h
-
-
-
-

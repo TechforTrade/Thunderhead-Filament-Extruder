@@ -1,5 +1,7 @@
 //Thermistor
 
+#include "definitions.h"
+
 // For Arduino 1.0 and earlier
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"

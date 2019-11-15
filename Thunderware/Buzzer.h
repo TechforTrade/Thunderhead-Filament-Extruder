@@ -9,6 +9,7 @@
 #ifndef Buzzer_h
 #define Buzzer_h
 
+#include "definitions.h"
 #include "Arduino.h"
 
 class Buzzer

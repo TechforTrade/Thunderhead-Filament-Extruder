@@ -6,6 +6,7 @@
 #ifndef Thermistor_h
 #define Thermistor_h
 
+#include "definitions.h"
 #include <inttypes.h>
 #include <avr/pgmspace.h>
 const int lookUpTable[30][2] PROGMEM= {

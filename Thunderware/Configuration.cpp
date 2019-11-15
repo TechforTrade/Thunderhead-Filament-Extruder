@@ -8,7 +8,7 @@ Created by Matthew P. Rogge, Februrary 12, 2014.
 Released into the public domain.
 
 */
-
+#include "definitions.h"
 #include "Arduino.h"
 #include "EEPROMAnything.h"
 #include "Configuration.h"
@@ -108,7 +108,11 @@ void Configuration::loadDefaultConfig()
   physical.spoolerMotorRollerRadius = 20.34/2;//relative to wooden disk radius
 
   //Zone 1 heater
-  physical.zone1.heaterPin = 12; //was 7
+#ifdef OLD_PINS
+  physical.zone1.heaterPin = 7;
+#else  
+  physical.zone1.heaterPin = 12;
+#endif
   physical.zone1.Kd = 0.0;
   physical.zone1.Ki = 0.15;
   physical.zone1.Kp = 3.4;
@@ -125,7 +129,11 @@ void Configuration::loadDefaultConfig()
   physical.zone1.activeCooling = false;
 
   //Zone 2 heater
-  physical.zone2.heaterPin = 11; //was D2
+#ifdef OLD_PINS
+  physical.zone2.heaterPin = 2;
+#else  
+  physical.zone2.heaterPin = 11;
+#endif
   physical.zone2.Kd = 0.0;
   physical.zone2.Ki = 0.15;
   physical.zone2.Kp = 3.4;
@@ -142,6 +150,11 @@ void Configuration::loadDefaultConfig()
   physical.zone2.activeCooling = false;
 
   //Zone 3 heater
+#ifdef OLD_PINS
+  physical.zone3.heaterPin = 3;
+#else  
+  physical.zone3.heaterPin = 10;
+#endif
   physical.zone3.heaterPin = 10;//Was D3
   physical.zone3.Kd = 0.0;
   physical.zone3.Ki = 0.15;
@@ -159,7 +172,11 @@ void Configuration::loadDefaultConfig()
   physical.zone3.activeCooling = false;
 
   //Zone 4 heater
-  physical.zone4.heaterPin = 9;//was D4
+#ifdef OLD_PINS
+  physical.zone4.heaterPin = 4;
+#else  
+  physical.zone4.heaterPin = 9;
+#endif
   physical.zone4.Kd = 0.0;
   physical.zone4.Ki = 0.15;
   physical.zone4.Kp = 3.4;
@@ -176,7 +193,11 @@ void Configuration::loadDefaultConfig()
   physical.zone4.activeCooling = false;
 
   //Zone 5 heater
-  physical.zone5.heaterPin = 8;//was 5
+#ifdef OLD_PINS
+  physical.zone5.heaterPin = 5;
+#else  
+  physical.zone5.heaterPin = 8;
+#endif  
   physical.zone5.Kd = 0.0;
   physical.zone5.Ki = 0.15;
   physical.zone5.Kp = 3.4;
@@ -269,5 +290,3 @@ void Configuration::loadProfileNames() {
     loadProfileName(profileNames[i], i);
   }
 }
-
-

@@ -8,6 +8,7 @@
 
 */
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "Heater.h"
 

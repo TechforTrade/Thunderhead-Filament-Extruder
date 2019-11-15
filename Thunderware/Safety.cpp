@@ -6,6 +6,7 @@
   Released into the public domain.
 */
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "Safety.h"
 
@@ -98,4 +99,3 @@ void Safety::check()
   }
 
 void Safety::shutDown(char* msg1, char* msg2){}
-

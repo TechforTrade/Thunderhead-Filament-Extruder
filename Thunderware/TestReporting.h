@@ -1,6 +1,8 @@
 #ifndef TestReporting_h
 #define TestReporting_h
 
+#include "definitions.h"
+
 //#include "StarveFeeder.h"
 
 void reportCurrentMeasurementTitles() {

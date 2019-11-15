@@ -8,6 +8,7 @@
 #ifndef Safety_h
 #define Safety_h
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "Configuration.h"
 
@@ -82,4 +83,3 @@ private:
 //
 //}
 //#endif // Safety_h
-

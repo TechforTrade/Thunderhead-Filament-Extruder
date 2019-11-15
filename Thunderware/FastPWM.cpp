@@ -7,6 +7,7 @@
   Released into the public domain.
 */
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "FastPWM.h"
 
@@ -15,7 +16,7 @@ FastPWM::FastPWM(int pinSet)
 {
  _pinSet = pinSet;
  switch (_pinSet){
-   case 0://SET_6_7_8
+   case 0://SET_6_7_8 or 6_14_8 if using OLD_PINS
      _timerNumber = 4;
      break;
    case 1://SET_11_15_12

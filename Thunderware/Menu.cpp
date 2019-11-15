@@ -372,7 +372,7 @@ void Menu::_editValue(int item) {
 	boolean valueBeingEntered = true;
 	
 	while (valueBeingEntered) {
-		while (invalid) {
+		while (invalid) { //This is dangerous because heaters may remain on and safety checks aren't done.
 			_key = _kpd->getKey(); //get user input
 
 			//Allow for keyboard input as well
@@ -753,4 +753,3 @@ char* Menu::_getValueStr(char* str, int item) {
 	}
 	return str;
 }
-

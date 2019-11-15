@@ -12,6 +12,7 @@
 #ifndef StepperMotor_h
 #define StepperMotor_h
 
+#include "definitions.h"
 #include "Arduino.h"
 #include "FastPWM.h"
 #include "Configuration.h"

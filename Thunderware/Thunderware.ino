@@ -8,10 +8,8 @@
   Created by Matthew P. Rogge, Februrary 12, 2014.
   Released into the public domain.
 
-
-Note: This firmware is written for use with the Thunderboard PCB
-
 */
+#include "definitions.h"
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -79,13 +77,23 @@ void (*state_table[])() = {
 };
 
 // lcd pins
-const byte LCD_RS  = 30;//22;
-const byte LCD_EN  = 34;//24;
-const byte LCD_D4  = 44;//26;
-const byte LCD_D5  = 46;//28;
-const byte LCD_D6  = 48;//30;
-const byte LCD_D7  = 50;//32;
+#ifdef OLD_PINS
+const byte LCD_RS  = 22;
+const byte LCD_EN  = 24;
+const byte LCD_D4  = 26;
+const byte LCD_D5  = 28;
+const byte LCD_D6  = 30;
+const byte LCD_D7  = 32;
 
+#else //The following pins are used with Thunderboard PCB
+const byte LCD_RS  = 30;
+const byte LCD_EN  = 34;
+const byte LCD_D4  = 44;
+const byte LCD_D5  = 46;
+const byte LCD_D6  = 48;
+const byte LCD_D7  = 50;
+
+#endif
 
 const byte LCD_ROWS = 4;
 const byte LCD_COLS = 20;
@@ -128,7 +136,9 @@ Heater zone5(&configuration.physical.zone5);
 
 StepperMotor auger(&configuration, configuration.physical.augerPinSet);
 
-Outfeed outfeed(&configuration.physical.diaSensorRegMap);
+//Outfeed outfeed(&configuration.physical.diaSensorRegMap);
+Outfeed outfeed(&configuration);
+
 QCDiaSensor qcDiameterSensor(&configuration.physical.qcDiaSensorRegMap);
 
 //Spooler spooler(&configuration);
@@ -191,21 +201,6 @@ void loop() {
   }
 
   switch (key) {
-    case '#':
-
-      zone3.setDutyCycle(zone3.getDutyCycle()+25);
-      zone4.setDutyCycle(zone4.getDutyCycle()+25);
-      zone5.setDutyCycle(zone5.getDutyCycle()+25);
-      lcd.setCursor(0,0);
-      lcd.print(zone3.getDutyCycle());
-      break;
-    case '*':
-      zone3.setDutyCycle(zone3.getDutyCycle()-25);
-      zone4.setDutyCycle(zone4.getDutyCycle()-25);
-      zone5.setDutyCycle(zone5.getDutyCycle()-25);
-      lcd.setCursor(0,0);
-      lcd.print(zone3.getDutyCycle());
-      break;
     case 'A':
     case 'q':
       activeMenu->up();
@@ -231,9 +226,9 @@ void loop() {
       activeMenu->decrease();
       break;
 
-//    case '*'://reset LCD. Use when lcd goes crazy
-//      lcd.begin(20, 4);
-//      activeMenu->display();
+    case '*'://reset LCD. Use when lcd goes crazy
+      lcd.begin(20, 4);
+      activeMenu->display();
       break;
   }
 
@@ -663,7 +658,7 @@ void setAugerRPM() {
 
 void setOutfeedRPM() {
   outfeed.setRPM(configuration.physical.diaSensorRegMap.s.rpm);
-  configuration.profile.outfeedRPM;
+  //configuration.profile.outfeedRPM;
 }
 
 void changeOutfeedSetpoint() {
@@ -800,4 +795,3 @@ void measureFilament() {
 
 }
 #include "test.h"
-

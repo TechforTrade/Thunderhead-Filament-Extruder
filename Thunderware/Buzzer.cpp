@@ -6,7 +6,7 @@
   Created by Matthew P. Rogge, Februrary 12, 2014.
   Released into the public domain.
 */
-
+#include "definitions.h"
 #include "Arduino.h"
 #include "Buzzer.h"
 
@@ -61,4 +61,3 @@ void Buzzer::reset(){
 	msgIndex = 0;
 	_currentMsg = NO_MSG;
 }
-
