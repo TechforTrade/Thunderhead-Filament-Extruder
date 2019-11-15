@@ -184,6 +184,7 @@ void Outfeed::reset()
 // put the mmExtruded into the compute time part. So then update can be called as rapidly as possible
 void Outfeed::activate()
 {
+#ifdef MAC_OUTFEED //Outfeed only needs activation if it is being controlled by the Main Arduino Controller
   _now = millis();
 
   if (_now >= _computeTime) {
@@ -202,9 +203,10 @@ void Outfeed::activate()
 //        reduceSpeedFlag = false;
 //      }
     }
-    _computeTime = _now + (long) * _computeInterval;
+    _computeTime = _now + _computeInterval;
   }
   _previousTime = _now;
+#endif
 }
 
 

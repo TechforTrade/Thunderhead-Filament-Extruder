@@ -62,6 +62,7 @@ class Outfeed
     StepperMotor   _motor;
     PID            _pid;
     unsigned long _computeTime;
+    unsigned long _computeInterval;
 
 #endif
     void _writeRegister(byte address);
